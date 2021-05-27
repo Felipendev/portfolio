@@ -443,8 +443,8 @@ body {
     align-items: center;
     justify-content: space-between;
     flex-direction: row;
-    background-color: #4d4855;
-    background-image: linear-gradient(-100deg, #4d4855 0%, #000000 74%);
+    background-color: #130f40;
+    background-image: linear-gradient(315deg, #130f40 0%, #000000 74%);
     padding-right: 50px;
     color: #fff;
 }
@@ -508,4 +508,23 @@ body {
     margin: 20px;
     text-align: center;
     transition: 0.5s;
+}
+
+#services #content .servicesBx:hover {
+    background: #2196f3;
+}
+
+#services #content .servicesBx img {
+    max-width: 80px;
+    filter: invert(1);
+}
+
+#services #content .servicesBx h2 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+#footer {
+    min-width: 100vh;
+    background: #fff;
 }
