@@ -16,8 +16,14 @@ h2 {
     display: flex;
     min-width: 100vh;
     min-height: 100vh;
-    background-color: #130f40;
+}
+
+.bg {
     background-image: linear-gradient(315deg, #130f40 0%, #000000 74%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 #logo {
@@ -46,10 +52,6 @@ h2 {
 
 #logo-invisivel.hide {
     animation: fadeOffLeft 1s forwards ease-out;
-}
-
-body {
-    background: #111;
 }
 
 #header #ativar {
@@ -443,8 +445,8 @@ body {
     align-items: center;
     justify-content: space-between;
     flex-direction: row;
-    background-color: #130f40;
-    background-image: linear-gradient(315deg, #130f40 0%, #000000 74%);
+    /* background-color: #130f40;
+    background-image: linear-gradient(315deg, #130f40 0%, #000000 74%); */
     padding-right: 50px;
     color: #fff;
 }
@@ -475,7 +477,7 @@ body {
 }
 
 #services {
-    background: #111;
+    /* background: #111; */
     justify-content: center;
     align-items: center;
 }
@@ -526,5 +528,5 @@ body {
 
 #footer {
     min-width: 100vh;
-    background: #fff;
+    /* background: #fff; */
 }
