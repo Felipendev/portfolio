@@ -10,11 +10,9 @@ btnAtivar.addEventListener('click', () => {
     const navbar = $('#header #navbar');
     const container = $('#container #aboutME');
     const main = $('main');
-    // const biography = document.getElementById('biography');
 
     logo.classList.toggle('show');
     navbar.classList.toggle('show');
-    // biography.classList.toggle('show');
 
     logoInvisivel.classList.toggle('hide');
     btnClickMe.classList.add('hide');

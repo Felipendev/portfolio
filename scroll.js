@@ -24,8 +24,4 @@ window.addEventListener('scroll', () => {
         mainContent.classList.remove('show');
         imgBiography.classList.remove('show');
     }
-
-    console.log(scrolled);
 });
-
-console.log(window);
