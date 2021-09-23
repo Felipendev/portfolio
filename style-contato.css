@@ -1,0 +1,390 @@
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&family=Yanone+Kaffeesatz:wght@300;400&display=swap");
+* {
+    box-sizing: border-box;
+}
+
+a { 
+    color: inherit; 
+}
+
+h2 {
+    font-family: "Yanone Kaffeesatz", sans-serif;
+    color: black;
+    font-size: 50px;
+    font-weight: 300;
+    margin: 0;
+}
+
+h1 {
+    font-family: "Varela Round", sans-serif;
+    color: black;
+    font-size: 18px;
+    margin: 0;
+}
+
+p {
+    font-family: "Varela Round", sans-serif;
+    color: #707070;
+    margin: 0;
+}
+
+.line {
+    border-right: 2px solid black;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+}
+
+.container {
+    width: 1000px;
+    height: 500px;
+    display: flex;
+}
+
+#header{
+    display: flex;
+    align-items: center;
+}
+
+#navbar.bgMenu #logo {
+    color: #111;
+    font-size: 1.5rem;
+    font-weight: 800;
+    opacity: 1;
+}
+
+#navbar {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    top: 0;
+    width: 100%;
+    padding: 10px 10px;
+    font-size: 1rem;
+    transition: 0.5s;
+    transform: translateY(-85px);
+    opacity: 0;
+    z-index: 1;
+}
+
+#navbar.bgMenu.invisible {
+    background: transparent;
+    display: none;
+}
+
+#navbar.bgMenu {
+    background: #fff;
+    font-size: 1rem;
+    padding: 0 100px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+#navbar ul li {
+    display: inline-block;
+    list-style: none;
+}
+
+#navebar ul li.animar {
+    animation: fadeIn 2s forwards;
+}
+
+#navbar.animar {
+    animation: fadeIn 2s forwards;
+    display: inline-block;
+    list-style: none;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+#navbar ul li a {
+    text-transform: uppercase;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 40px;
+    padding: 5px 20px;
+    text-decoration: none;
+    border-radius: 20px;
+    color: #fff;
+    font-weight: 400;
+    letter-spacing: 1px;
+    overflow: hidden;
+    transition: 0.3s;
+    backdrop-filter: blur(15px);
+}
+
+#navbar.bgMenu ul li a {
+    color: #111;
+}
+
+#navbar ul li a:hover {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-image: linear-gradient(239deg, #f06, #00b2ff);
+    letter-spacing: 3px;
+}
+
+.menu {
+    width: 70px;
+    height: 500px;
+    background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.5));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    border-radius: 70px;
+}
+
+.menu svg {
+    width: 100%;
+    height: 60px;
+    padding: 8px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.corTwitter {
+    color: #00acee;
+}
+
+.corInstagram {
+    color: #dd0048;
+}
+
+.corLinkedin {
+    color: #0e76a8;
+}
+
+.bgTwitter {
+    background: #08acec;
+}
+
+.bgInstagram {
+    background: #dd0048;
+}
+
+.bgLinkedin {
+    background: #0e76a8;
+}
+
+.board__container {
+    width: 95%;
+    height: 100%;
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
+    display: flex;
+    align-items: center;
+    position: relative;
+    border-radius: 80px;
+}
+
+.board {
+    background: white;
+    width: 600px;
+    height: 370px;
+    -webkit-box-shadow: -9px 13px 31px -16px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -9px 13px 31px -16px rgba(0, 0, 0, 0.75);
+    box-shadow: -9px 13px 31px -16px rgba(0, 0, 0, 0.75);
+    position: absolute;
+    right: 30px;
+    border-radius: 80px;
+    padding: 0 30px;
+    display: flex;
+    animation: board__right__grow 1s;
+}
+
+.flex-board {
+    width: 600px;
+    height: 370px;
+    border-radius: 80px;
+    position: absolute;
+    right: 300px;
+}
+
+.flex-board-open {
+    animation: board__right__grow 0.5s ease 0s forwards;
+}
+
+.flex-board-close {
+    animation: board__right__shrink 0.5s ease 0s forwards;
+}
+
+.imagemVisivel {
+    animation: show 0.5 forwards;
+}
+
+.imagemApagada {
+    animation: hide 0.5 forwards;
+}
+
+.illustration {
+    width: 200px;
+    position: absolute;
+    top: -60px;
+    left: -50px;
+    opacity: 1;
+}
+
+.board__left,
+.board__right {
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+
+.inline__content {
+    display: flex;
+    align-items: center;
+}
+
+.subheader img {
+    height: 150px;
+    border-radius: 16px;
+}
+
+.card {
+    height: 100%;
+    padding: 40px;
+}
+
+.botao {
+    background: transparent;
+    margin: 10px;
+    padding: 9px 20px;
+    border-radius: 9999px;
+    border-color: rgb(29, 161, 242);
+    border-width: 1px;
+    border-style: solid;
+    cursor: pointer;
+}
+
+#redesSociais {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    list-style: none;
+    outline: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.con-social-btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.con-social-btns button {
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0px;
+    color: #fff;
+    cursor: pointer;
+    background: transparent;
+    position: relative;
+    transition: all .25s ease;
+}
+
+.con-social-btns button:active {
+    transform: scale(.85);
+}
+
+.bg {
+    position: absolute;
+    width: 40px;
+    background: rgb(53, 209, 214);
+    height: 40px;
+    border-radius: 50px;
+    pointer-events: none;
+    box-shadow: 0px 8px 35px 0px rgba(65, 53, 214, .25);
+}
+
+.con-social-btns button i {
+    pointer-events: none;
+    font-size: 1.8rem;
+    z-index: 10;
+    position: relative;
+}
+
+.linkGithub {
+    text-decoration: none;
+}
+
+.linkGithub:visited {
+    color: rgba(0, 0, 0, 0.75);
+}
+
+.typing-animation {
+    animation: blickCursor 500ms steps(30) infinite normal, typing 4s steps(30) 1s normal infinite both;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 6.5em;
+    }
+}
+
+@keyframes blickCursor {
+    from {
+        border-right-color: black;
+    }
+    to {
+        border-right-color: transparent;
+    }
+}
+
+@keyframes board__right__grow {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 600px;
+    }
+}
+
+@keyframes board__right__shrink {
+    0% {
+        width: 600px;
+    }
+    100% {
+        width: 0px;
+    }
+}
+
+@keyframes show {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes hide {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
